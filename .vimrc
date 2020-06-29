@@ -16,6 +16,8 @@ set relativenumber
 
 call plug#begin('~/.vim/plugged')
 
+
+Plug 'vim-airline/vim-airline'
 " Themes
 Plug 'morhetz/gruvbox'
 
