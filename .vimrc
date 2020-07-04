@@ -1,6 +1,14 @@
+set noerrorbells
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent
+set nowrap
+set smartcase
+set noswapfile
+set incsearch
 set guifont=Fira\ Code:h12
 set number
-set tabstop=4
 set ls=2
 set ai
 set mouse=a
@@ -16,10 +24,11 @@ set relativenumber
 
 call plug#begin('~/.vim/plugged')
 
-
 Plug 'vim-airline/vim-airline'
 " Themes
 Plug 'morhetz/gruvbox'
+
+Plug 'Yggdroot/indentLine'
 
 " IDE
 Plug 'easymotion/vim-easymotion'
@@ -28,6 +37,8 @@ Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
 
+let g:indentLine_faster = 1
+let g:indentLine_color_term = 239 
 
 colorscheme gruvbox
 let g:gruvbox_contrast_dark = "hard"
