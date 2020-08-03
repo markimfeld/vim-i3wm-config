@@ -1,5 +1,5 @@
 set tabstop=4
-set shiftwidth=4
+set shiftwidth=4 
 set noerrorbells
 set expandtab
 set nowrap
@@ -33,7 +33,7 @@ Plug 'mattn/emmet-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 
 " Themes
@@ -45,11 +45,6 @@ Plug 'Yggdroot/indentLine'
 Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdtree'
 Plug 'christoomey/vim-tmux-navigator'
-
-
-Plug 'ryanoasis/vim-devicons'
-Plug 'vwxyutarooo/nerdtree-devicons-syntax'
-Plug 'ryanoasis/vim-webdevicons'
 
 call plug#end()
 
@@ -78,21 +73,9 @@ let g:user_emmet_leader_key=','
 
 let g:airline_powerline_fonts = 1
 
-let s:colors = {
-  \ 'brown'       : "905532",
-  \ 'aqua'        : "3AFFDB",
-  \ 'blue'        : "689FB6",
-  \ 'darkBlue'    : "44788E",
-  \ 'purple'      : "834F79",
-  \ 'lightPurple' : "834F79",
-  \ 'red'         : "AE403F",
-  \ 'beige'       : "F5C06F",
-  \ 'yellow'      : "F09F17",
-  \ 'orange'      : "D4843E",
-  \ 'darkOrange'  : "F16529",
-  \ 'pink'        : "CB6F6F",
-  \ 'salmon'      : "EE6E73",
-  \ 'green'       : "8FAA54",
-  \ 'lightGreen'  : "31B53E",
-  \ 'white'       : "FFFFFF"
-\ }
+" vim hardcodes background color erase even if the terminfo file does
+" not contain bce (not to mention that libvte based terminals
+" incorrectly contain bce in their terminfo files). This causes
+" incorrect background rendering when using a color theme with a
+" background color.
+let &t_ut=''
